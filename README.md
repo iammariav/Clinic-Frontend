@@ -17,19 +17,6 @@ This project was developed for academic purposes as part of a software engineeri
 - ESLint
 - Vercel (Deployment)
 
-## Project Structure
-se2_clinic_frontend/
-├── src/
-│ ├── components/
-│ ├── pages/
-│ ├── services/
-│ ├── App.jsx
-│ └── main.jsx
-├── public/
-├── .env
-├── package.json
-├── vite.config.js
-└── README.md
 
 # Manual testing was performed for the following functionalities:
 -Create appointmen
