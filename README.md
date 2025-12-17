@@ -7,6 +7,10 @@ The frontend communicates with a RESTful backend API using Axios.
 
 This project was developed for academic purposes as part of a software engineering requirement.
 
+### Live URls
+frontend - "https://clinic-frontend-three-khaki.vercel.app/"
+backend - "https://clinic-appoint-backend-2.onrender.com"
+
 ## Technologies Used
 - React 18
 - Vite
@@ -38,7 +42,7 @@ https://github.com/iammariav/Clinic-Frontend
 Backend Repository:
 https://github.com/iammariav/clinic_appoint_backend
 
-Versel:
+Vercel:
 Domain - https://clinic-frontend-three-khaki.vercel.app/
 
 URL - https://vercel.com/maria-valencias-projects/clinic-frontend/CaAeZ6QyZEb5hY86KRb7V5cdHo3u#L9-L14
