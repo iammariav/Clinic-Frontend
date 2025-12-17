@@ -14,16 +14,14 @@ backend - "https://clinic-appoint-backend-2.onrender.com"
 ## Technologies Used
 - React 18
 - Vite
-- Axios
-- JavaScript (ES6+)
-- HTML5
-- CSS3
+- JavaScript
+- CSS
 - ESLint
 - Vercel (Deployment)
 
 
 # Manual testing was performed for the following functionalities:
--Create appointmen
+-Create appointment
 -Input validation
 -View appointment list
 -Update appointment details
