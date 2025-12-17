@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-const BASE_URL = "https://clinic-appoint-backend-2.onrender.com/"; 
+const BASE_URL = "http://localhost:3000"; // <-- Replace with your backend URL if deployed
 
 function App() {
   const [patients, setPatients] = useState([]);
@@ -41,14 +41,14 @@ function App() {
     setAppointments(data);
   };
 
-  // -------------------- PATIENT HANDLERS --------------------
+  // -------------------- PATIENTS --------------------
   const handlePatientSubmit = async (e) => {
     e.preventDefault();
     if (editingPatientId) {
       const res = await fetch(`${BASE_URL}/api/patients/${editingPatientId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(patientForm)
+        body: JSON.stringify(patientForm),
       });
       const data = await res.json();
       setPatients(patients.map(p => (p._id === editingPatientId ? data : p)));
@@ -57,7 +57,7 @@ function App() {
       const res = await fetch(`${BASE_URL}/api/patients`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(patientForm)
+        body: JSON.stringify(patientForm),
       });
       const data = await res.json();
       setPatients([...patients, data]);
@@ -75,14 +75,14 @@ function App() {
     setPatients(patients.filter(p => p._id !== id));
   };
 
-  // -------------------- DOCTOR HANDLERS --------------------
+  // -------------------- DOCTORS --------------------
   const handleDoctorSubmit = async (e) => {
     e.preventDefault();
     if (editingDoctorId) {
       const res = await fetch(`${BASE_URL}/api/doctors/${editingDoctorId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(doctorForm)
+        body: JSON.stringify(doctorForm),
       });
       const data = await res.json();
       setDoctors(doctors.map(d => (d._id === editingDoctorId ? data : d)));
@@ -91,7 +91,7 @@ function App() {
       const res = await fetch(`${BASE_URL}/api/doctors`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(doctorForm)
+        body: JSON.stringify(doctorForm),
       });
       const data = await res.json();
       setDoctors([...doctors, data]);
@@ -109,14 +109,14 @@ function App() {
     setDoctors(doctors.filter(d => d._id !== id));
   };
 
-  // -------------------- APPOINTMENT HANDLERS --------------------
+  // -------------------- APPOINTMENTS --------------------
   const handleAppointmentSubmit = async (e) => {
     e.preventDefault();
     if (editingAppointmentId) {
       const res = await fetch(`${BASE_URL}/api/appointments/${editingAppointmentId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(appointmentForm)
+        body: JSON.stringify(appointmentForm),
       });
       const data = await res.json();
       setAppointments(appointments.map(a => (a._id === editingAppointmentId ? data : a)));
@@ -125,7 +125,7 @@ function App() {
       const res = await fetch(`${BASE_URL}/api/appointments`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(appointmentForm)
+        body: JSON.stringify(appointmentForm),
       });
       const data = await res.json();
       setAppointments([...appointments, data]);
@@ -139,7 +139,7 @@ function App() {
       doctorId: appointment.doctorId._id,
       startAt: appointment.startAt,
       endAt: appointment.endAt,
-      notes: appointment.notes
+      notes: appointment.notes,
     });
     setEditingAppointmentId(appointment._id);
   };
