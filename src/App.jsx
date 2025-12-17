@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-const BASE_URL = "http://localhost:3000"; // <-- Replace with your backend URL if deployed
+const BASE_URL = "https://clinic-appoint-backend.onrender.com"; 
 
 function App() {
   const [patients, setPatients] = useState([]);
