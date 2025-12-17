@@ -45,6 +45,11 @@ Domain - https://clinic-frontend-three-khaki.vercel.app/
 
 URL - https://vercel.com/maria-valencias-projects/clinic-frontend/CaAeZ6QyZEb5hY86KRb7V5cdHo3u#L9-L14
 
+![Frontend CRUD Screenshot](images/frontend-crud.png)
+
+
+
+
 # Developer Information:
 -Developer Name: Maria Valencia
 -System Name: Clinic Management System
